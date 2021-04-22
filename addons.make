@@ -2,4 +2,5 @@ ofxBranchesPrimitive
 ofxGui
 ofxLSystem
 ofxLSystemGrammar
+ofxNetwork
 ofxSpaceColonization

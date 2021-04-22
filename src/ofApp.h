@@ -7,41 +7,18 @@
 #include "TextController.h"
 #include "Terrain.h"
 #include "Network.h"
+#include "Simulation.h"
+#include "ofxNetwork.h"
 
 class ofApp : public ofBaseApp{
 
 	public:
-        ofColor bgColor;
-        ofColor lightColor;
-        ofMaterial mat;
-        ofLight light;
-
-        ofEasyCam camera;
-        bool rotateCamera = true;
-    
-        vector<Tree> trees;
-        Tree tree;
-        Fungi fungi;
-        Rock rock;
-        Terrain terrain;
-        Network network;
-        TextController textController;
-    
-        ofTrueTypeFont font;
-        int fontSize;
-        ofColor textColour;
-        bool showFont;
-        string text;
-        float fontTimestamp = 0;
-        float fontDelayTime = 5.0f;
-        
-        float geneValue;
+        Simulation simulation;
     
 		void setup();
 		void update();
 		void draw();
     
-        void drawFont();
     
         void setupForest();
         
