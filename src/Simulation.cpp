@@ -7,7 +7,7 @@
 
 #include "Simulation.h"
 void Simulation::setup(){
-//    rotateCamera = false;
+    rotateCamera = false;
     geneValue = ofRandom(1);
     
     bgColor = ofColor(190, 220, 200);
@@ -34,7 +34,7 @@ void Simulation::setup(){
                 40,
                 geneValue);
     terrain.setup();
-//    network.setup();
+    network.setup();
     textController.setup();
     
     
@@ -66,9 +66,10 @@ void Simulation::draw(){
         camera.begin();
         light.draw();
         tree.draw();
-        fungi.draw();
-        rock.draw();
-        terrain.draw();
+//        fungi.draw();
+//        rock.draw();
+//        terrain.draw();
+        network.draw();
         ofDisableDepthTest();
         camera.end();
         textController.draw();

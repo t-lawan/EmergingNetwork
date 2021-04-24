@@ -1,12 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "Tree.h"
-#include "Rock.h"
-#include "Fungi.h"
-#include "TextController.h"
-#include "Terrain.h"
-#include "Network.h"
 #include "Simulation.h"
 #include "ofxNetwork.h"
 
@@ -14,10 +8,13 @@ class ofApp : public ofBaseApp{
 
 	public:
         Simulation simulation;
+        ofxTCPServer server;
     
 		void setup();
 		void update();
 		void draw();
+    
+        void checkForMessages();
     
     
         void setupForest();
