@@ -2,6 +2,7 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    ofSetFrameRate(60);
     ofxTCPSettings settings("127.0.0.1", 11324);
     server.setVerbose(true);
     server.setup(settings);

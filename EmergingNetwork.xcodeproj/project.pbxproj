@@ -54,6 +54,8 @@
 		ED0C9FDD7CD70C6CF60DD5A9 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F5D17F030FEE8BAE9A2A711 /* Tree.cpp */; };
 		F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E112B3AEBEA2C091BF2B40AE /* ofxPanel.cpp */; };
 		FA5795B8263181C1000B3AEC /* Simulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA5795B6263181C1000B3AEC /* Simulation.cpp */; };
+		FAEF6C80263D361E00D8EA87 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAEF6C7E263D361E00D8EA87 /* Particle.cpp */; };
+		FAEF6C84263D75A000D8EA87 /* ParticleSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAEF6C82263D75A000D8EA87 /* ParticleSystem.cpp */; };
 		FFC8106D58AEDB4AA8395564 /* Rock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 084DCFF9142DCFB397D73966 /* Rock.cpp */; };
 /* End PBXBuildFile section */
 
@@ -356,6 +358,10 @@
 		FA5795B6263181C1000B3AEC /* Simulation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Simulation.cpp; sourceTree = "<group>"; };
 		FA5795B7263181C1000B3AEC /* Simulation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Simulation.h; sourceTree = "<group>"; };
 		FA805E3D02AF268F01BD7264 /* Rock.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Rock.h; path = src/Rock/Rock.h; sourceTree = SOURCE_ROOT; };
+		FAEF6C7E263D361E00D8EA87 /* Particle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
+		FAEF6C81263D38A900D8EA87 /* Particle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
+		FAEF6C82263D75A000D8EA87 /* ParticleSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleSystem.cpp; sourceTree = "<group>"; };
+		FAEF6C83263D75A000D8EA87 /* ParticleSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ParticleSystem.h; sourceTree = "<group>"; };
 		FB9ABDB6C59F21AA1F957B2A /* ofxLSLine.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxLSLine.cpp; path = ../../../addons/ofxLSystem/src/ofxLSLine.cpp; sourceTree = SOURCE_ROOT; };
 		FBEF5F5F72779F7C0475B102 /* ofxLSGrammarDetector.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxLSGrammarDetector.h; path = ../../../addons/ofxLSystemGrammar/src/ofxLSGrammarDetector.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -879,6 +885,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				FAEF6C7D263D353D00D8EA87 /* Particles */,
 				FA5795B5263181B2000B3AEC /* Simulation */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
@@ -939,6 +946,17 @@
 				FA5795B7263181C1000B3AEC /* Simulation.h */,
 			);
 			name = Simulation;
+			sourceTree = "<group>";
+		};
+		FAEF6C7D263D353D00D8EA87 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				FAEF6C7E263D361E00D8EA87 /* Particle.cpp */,
+				FAEF6C81263D38A900D8EA87 /* Particle.h */,
+				FAEF6C82263D75A000D8EA87 /* ParticleSystem.cpp */,
+				FAEF6C83263D75A000D8EA87 /* ParticleSystem.h */,
+			);
+			name = Particles;
 			sourceTree = "<group>";
 		};
 		FF8145C04D566ED1D51E5747 /* ofxBranchesPrimitive */ = {
@@ -1082,8 +1100,10 @@
 				9D32FDFBB2A93ADD91CAEF7E /* ofxLSGSanitizer.cpp in Sources */,
 				DF1A217E77EBFC4F05E8859A /* ofxLSGrammarDetector.cpp in Sources */,
 				C3FB86F08340C809A8A3158A /* ofxLSGrammarParametric.cpp in Sources */,
+				FAEF6C80263D361E00D8EA87 /* Particle.cpp in Sources */,
 				89781C56C1EDCEE9189ECA47 /* ofxLSGrammarStandard.cpp in Sources */,
 				FA5795B8263181C1000B3AEC /* Simulation.cpp in Sources */,
+				FAEF6C84263D75A000D8EA87 /* ParticleSystem.cpp in Sources */,
 				75FAC88317CB82EB99B08A61 /* ofxLSGrammarStochastic.cpp in Sources */,
 				1B5717F94B4F78CAAC4D5EE2 /* ofxLSystemGrammar.cpp in Sources */,
 				661A1991F5CE4CCC2919D8E7 /* ofxNetworkUtils.cpp in Sources */,

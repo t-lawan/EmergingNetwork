@@ -22,7 +22,7 @@ void Rock::setup(int _slowness = 100, float _geneValue = 0.5){
     emissiveColor = ofColor(157, 184, 162);
     emissiveColor = ofColor(55, 66, 23);
     numOfPoints = 0;
-    connectionDistance = 200;
+    connectionDistance = ofMap(geneValue, 0, 1, 100, 300);
     
     for(int i = 0; i < maxNumOfPoints; i++) {
         offsets.push_back(ofVec3f(ofRandom(0,100000), ofRandom(0,100000), ofRandom(0,100000)));

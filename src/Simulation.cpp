@@ -7,8 +7,7 @@
 
 #include "Simulation.h"
 void Simulation::setup(){
-    rotateCamera = false;
-    geneValue = ofRandom(1);
+    rotateCamera = true;
     
     bgColor = ofColor(190, 220, 200);
     lightColor = ofColor(0, 0, 235);
@@ -35,6 +34,7 @@ void Simulation::setup(){
                 geneValue);
     terrain.setup();
     network.setup();
+    particles.setup(geneValue);
     textController.setup();
     
     
@@ -48,6 +48,8 @@ void Simulation::update(){
     tree.update();
     fungi.update();
     rock.update();
+    particles.update();
+    
     terrain.update();
 
     if(rotateCamera){
@@ -67,11 +69,13 @@ void Simulation::draw(){
         light.draw();
         tree.draw();
 //        fungi.draw();
-//        rock.draw();
-//        terrain.draw();
+        rock.draw();
+        terrain.draw();
+        particles.draw();
         network.draw();
-        ofDisableDepthTest();
+//        ofDisableDepthTest();
         camera.end();
+        ofDisableDepthTest();
         textController.draw();
 
 }
@@ -82,5 +86,7 @@ void Simulation::restart(float _geneValue, float _divinationValue){
     tree.reset(geneValue);
     fungi.reset(geneValue);
     rock.reset(geneValue);
+    network.reset(geneValue);
+    particles.reset(geneValue);
     textController.showDisplay(_divinationValue);
 }

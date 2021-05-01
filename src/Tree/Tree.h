@@ -19,6 +19,7 @@ class Tree {
         int selectedLength;
         int slowness;
 
+
     
         float geneValue;
     

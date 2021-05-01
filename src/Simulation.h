@@ -17,7 +17,7 @@
 #include "Terrain.h"
 #include "Network.h"
 #include "ofxNetwork.h"
-
+#include "ParticleSystem.h"
 class Simulation {
     public:
         ofColor bgColor;
@@ -34,6 +34,7 @@ class Simulation {
         Rock rock;
         Terrain terrain;
         Network network;
+        ParticleSystem particles;
         TextController textController;
     
         float geneValue;

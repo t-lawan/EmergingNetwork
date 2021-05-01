@@ -9,7 +9,10 @@
 
 
 void TextController::setup(){
+    index = 0;
     fontSize = 14;
+    radius = 200;
+    circleAlpha = 255;
     font.load("font.ttf", fontSize);
     text = "This is text";
     setupDivinationText();
@@ -64,13 +67,12 @@ void TextController::update(){
     
 }
 
-
 void TextController::draw(){
     if(showFont){
         ofSetColor(textColour);
 //        ofRectangle r = font.getStringBoundingBox(text, 0, 0);
 //        font.drawString(text, ofGetWidth()/2 - (r.width/2), ofGetHeight()/2 );
-        float radius = 200;
+//        float radius = 200;
         ofPushMatrix();
         ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
         for(int i=0; i<words.size(); i++) {
@@ -83,7 +85,8 @@ void TextController::draw(){
             
             ofTranslate(x, y );
             ofRotateZDeg(a );
-            font.drawString(words[i], 0, 20);
+            ofSetColor(ofColor(55, 66, 23));
+            font.drawString(words[i], 0, 0);
             ofPopMatrix();
         }
         ofPopMatrix();
@@ -91,6 +94,10 @@ void TextController::draw(){
         if(showFont && (ofGetElapsedTimef() - fontTimestamp > fontDelayTime) ){
             showFont = false;
         }
+        
+        moveCircle();
+        
+
         
     }
 
@@ -102,5 +109,36 @@ void TextController::showDisplay(float num){
     text = divinationText[1][secondVal];
     words = ofSplitString(text, " ");
     showFont = true;
+    fontDelayTime = words.size() * secondsPerWord;
     fontTimestamp = ofGetElapsedTimef();
+    index = 0;
+}
+
+void TextController::moveCircle(){
+            ofPushMatrix();
+            ofPushStyle();
+            float t = -HALF_PI + ofMap(index, 0, (words.size()), 0, TWO_PI);
+    //        float t = -HALF_PI + TWO_PI;
+            float extendedRadius = radius + 150.0;
+            float x = cos( t ) * extendedRadius;
+            float y = sin( t ) * extendedRadius;
+    //        cout << x << " : " << y << endl;
+            ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
+           float a = ofRadToDeg(atan2(y, x));
+            ofTranslate(x, y );
+            ofRotateZDeg(a );
+            ofSetColor(ofColor(55, 66, 23));
+            ofDrawCircle(0, 0, 7.5);
+            ofPopStyle();
+            ofPopMatrix();
+    
+    
+//    float numOfSecondsPerWord = fontDelayTime/words.size();
+    float num = index  + 1;
+    if(ofGetElapsedTimef() - fontTimestamp > (num * secondsPerWord)){
+        index++;
+    }
+            
+    
+//            if(ofGetElapsedTimef())
 }

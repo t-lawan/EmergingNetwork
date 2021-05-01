@@ -16,11 +16,18 @@ class TextController {
         ofTrueTypeFont font;
         int fontSize;
         ofColor textColour;
+        float radius;
+        float circleAlpha;
         bool showFont;
         string text;
         vector<string> words;
         float fontTimestamp = 0;
         float fontDelayTime = 40.0f;
+        float secondsPerWord = 1.0f;
+        int index;
+        
+    
+        ofVec2f currentPos;
     
         vector<vector<string>> divinationText;
     
@@ -29,6 +36,7 @@ class TextController {
         void update();
         void draw();
         void showDisplay(float num);
+        void moveCircle();
     
 };
 
