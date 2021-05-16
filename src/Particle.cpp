@@ -21,7 +21,7 @@ void Particle::setup(ofVec3f position){
     childNode.setPosition(childPos);
 //    0,50,0
     ofVec3f grandChildPos = position;
-    grandChildPos.y += 100;
+    grandChildPos.y += 300;
     grandChildNode.setParent(childNode);
     grandChildNode.setPosition(grandChildPos);
     

@@ -10,7 +10,8 @@ void Simulation::setup(){
     rotateCamera = true;
     
     bgColor = ofColor(190, 220, 200);
-    lightColor = ofColor(0, 0, 235);
+//    bgColor = ofColor(0, 0, 255);
+    lightColor = ofColor(255, 255, 235);
     lightColor = ofColor::blue;
     
     light.setPosition(-600, 700, 0);

@@ -13,15 +13,15 @@ void Network::setup(){
     treeMaterial.setDiffuseColor(diffuseColor);
     treeMaterial.setEmissiveColor(emissiveColor);
     treeMaterial.setShininess(0.8);
-    pos = ofVec3f(50, 0, 400);
+    pos = ofVec3f(0, 0, 400);
     if(!geneValue){
         geneValue = ofRandom(0,1);
     }
 
     stepLength = ofMap(geneValue, 0, 1, 57.0, 90.0);
-    stepWidth= ofMap(geneValue, 0, 1,10.0, 4.0);
+    stepWidth= ofMap(geneValue, 0, 1,10.0, 2.0);
     stepWidth = 5.0;
-    stepLength = 90.0;
+    stepLength = 150.0;
     step = (int) ofMap(geneValue, 0, 1, 2, 4);
 //    tree.setPosition(pos);
     map<string, float> constants;

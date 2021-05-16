@@ -26,6 +26,7 @@ void Tree::setup(glm::vec4 _rootPosition, glm::vec3 _rootDirection, int _slownes
     
     diffuseColor = ofColor(190, 230, 230);
     diffuseColor = ofColor(57, 75, 27);
+//    diffuseColor = ofColor(0, 255, 0);
     emissiveColor = ofColor(0, 52, 87);
     emissiveColor = ofColor(55, 66, 23);
     

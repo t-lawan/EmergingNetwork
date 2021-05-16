@@ -22,44 +22,72 @@ void TextController::setup(){
 void TextController::setupDivinationText(){
 
     divinationText.push_back({
-        "No one knows the beginning and the end of things",
-        "ONE B"
+        "If you dream of the sea, you will not drown. You don't have to be afraid of its depths.",
+        "A sea extinghuishes a great fire because great problems are solved with great solutions."
     });
     divinationText.push_back({
-        "True change occurs when a being is transformed from the inside out. Everything else is ephemeral and superfluous.",
-        "Not all losses are bad. Some are even necessary for renewal and constant living."
+        "True change occurs when a being is transformed from the inside out.",
+        "Death to the King; Long live the king"
     });
     divinationText.push_back({
-        "THREE A",
-        "THREE B"
+        "Why do you ask if you already know the answer? Revelation is within you",
+        "The heart and the brain make things fair and just. If any fail, the imbalance brings defeat and failure"
     });
     divinationText.push_back({
-        "FOUR A",
-        "FOUR B"
+        "The fisherman can guide you in the great mysteries.",
+        "The fisherman can guide you in the great mysteries."
     });
     divinationText.push_back({
-        "FIVE A",
-        "FIVE B"
+        "Good fortune may be within your reach but certain obstacles prevent it from reaching you with it's royal splendour",
+        "Good fortune may be within your reach but certain obstacles prevent it from reaching you with it's royal splendour"
     });
     divinationText.push_back({
-        "SIX A",
-        "SIX B"
+        "In spite of having four cardinal points, you'll not be able to walk in four directions at the same time.",
+        "In spite of having four cardinal points, you'll not be able to walk in four directions at the same time."
     });
     divinationText.push_back({
-        "SEVEN A",
-        "SEVEN B"
+        "Do not waste time on futile and unnecessary things. Not everythign that is presented to you is appealing or good to consume.",
+        "Do not waste time on futile and unnecessary things. Not everythign that is presented to you is appealing or good to consume."
     });
     divinationText.push_back({
         "EIGHT A",
         "EIGHT B"
     });
     divinationText.push_back({
-        "NINE A",
-        "NINE B"
+        "Do not deny what your eyes see or ignore what your ears hear",
+        "Do not deny what your eyes see or ignore what your ears hear"
     });
     divinationText.push_back({
-        "TEN A",
-        "TEN B"
+        "Fears only create false images that contradict reality",
+        "Reality is there and you cannot hide it the same way you can't hide the sun with your finger"
+    });
+    divinationText.push_back({
+        "Fears only create false images that contradict reality",
+        "Reality is there and you cannot hide it the same way you can't hide the sun with your finger"
+    });
+    divinationText.push_back({
+        "Learn to listen to the sound of silence",
+        "Beyond you there is a world where fury and placidness coexist, the dualities of defeaning silences and calming noises."
+    });
+    divinationText.push_back({
+        "There are no solitary joys or unrecognised reqards. A true celebration is the one that is shared.",
+        "There are no solitary joys or unrecognised reqards. A true celebration is the one that is shared."
+    });
+    divinationText.push_back({
+        "Open yourself, leave the confinement and you will see everything differently.",
+        "Open yourself, leave the confinement and you will see everything differently."
+    });
+    divinationText.push_back({
+        "Live well every minute of your life",
+        "Nobility is a condition of the true wise"
+    });
+    divinationText.push_back({
+        "Excessive use is abuse and abusing leads to destruction.",
+        "Excessive use is abuse and abusing leads to destruction."
+    });
+    divinationText.push_back({
+        "Take many turns to realise that everything was there close, very close",
+        "Take many turns to realise that everything was there close, very close"
     });
 }
 
@@ -106,7 +134,7 @@ void TextController::draw(){
 void TextController::showDisplay(float num){
     int firstVal = ofMap(num, 0, 1, 0,divinationText.size()-1, true);
     int secondVal= ofRandom(0, 1);
-    text = divinationText[1][secondVal];
+    text = divinationText[firstVal][secondVal];
     words = ofSplitString(text, " ");
     showFont = true;
     fontDelayTime = words.size() * secondsPerWord;
